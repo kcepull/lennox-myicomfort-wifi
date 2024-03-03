@@ -5,13 +5,14 @@ import uuid
 import logging
 import datetime
 import requests
+import os
 from datetime import datetime, timezone
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
-USERID = 'kcepull'
-PASSWORD = 'nvj@fbm_qpm4qux5UKR'
+USERID = os.environ.get('USERID')
+PASSWORD = os.environ.get('PASSWORD')
 auth = (USERID,PASSWORD)
 
 # URLs
